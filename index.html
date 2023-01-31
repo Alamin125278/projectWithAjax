@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project with AJAX</title>
+    <!-- Bootstrap Css Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Main Css Link -->
+    <link rel="stylesheet" href="src/Scripts/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="display-4">Welcome to Ajax Crash Course</h1>
+        <div class="row my-5">
+            <div class="col">
+                <input type="text" placeholder="Enter Name" id="nameField" class="form-control">
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Enter Phone" id="phoneField" class="form-control">
+            </div>
+            <div class="col">
+                <input type="email" placeholder="Enter Email" id="emailField" class="form-control">
+            </div>
+            <div class="col">
+                <button id="saveContact" class="btn btn-primary">Save contact</button>
+            </div>
+        </div>
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+    </div>
+    
+
+
+<div class="modal fade" id="contactEditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Contact</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="edit-name" class="col-form-label">Edit Name</label>
+              <input type="text" class="form-control" id="edit-name">
+            </div>
+            <div class="mb-3">
+                <label for="edit-phone" class="col-form-label">Edit Phone</label>
+                <input type="text" class="form-control" id="edit-phone">
+              </div>
+              <div class="mb-3">
+                <label for="edit-email" class="col-form-label">Edit Email</label>
+                <input type="email" class="form-control" id="edit-email">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateContact">save Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Bootstrap Js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Main Js Link -->
+    <script src="src/Scripts/main.js"></script>
+    <!-- Axios Link -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
